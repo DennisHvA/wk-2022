@@ -8,4 +8,14 @@ console.log('main.js is linked');
 
 fetch('./groups.json')
     .then((response) => response.json())
-    .then((json) => console.log(json));
+    .then(groups => {
+                            
+        const newArray = [];
+            
+        groups.forEach(item => {
+            newArray.push(item["Name"])
+        })
+        
+        console.log(newArray);
+        
+    });
