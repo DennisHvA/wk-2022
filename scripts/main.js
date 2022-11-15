@@ -16,12 +16,12 @@ fetch('./groups.json')
                 '#': parseInt (item["Position"]),
                 Flag: item["SquadLogo"],
                 Nation: item["Name"],
-                Points: parseInt (item["Points"]),
-                Played: parseInt (item["Played"]),
-                Wins: parseInt (item["Winned"]),
-                Losses: parseInt (item["Loosed"]),
-                Ties: parseInt (item["Tie"]),
-                Goaldif: parseInt (item["Goal Difference"])
+                P: parseInt (item["Points"]),
+                G: parseInt (item["Played"]),
+                W: parseInt (item["Winned"]),
+                L: parseInt (item["Loosed"]),
+                T: parseInt (item["Tie"]),
+                DS: parseInt (item["Goal Difference"])
             }
 				
             return newItem
@@ -66,7 +66,10 @@ fetch('./groups.json')
                     )
                     .style("stroke", "#fff")
                     .attr("fill", function (d) {
-                        if(d.properties.name == "Brazil") {
+                        // als d.properties.name een element van: countryNames
+                        // countryNames.includes(d.properties.name)
+                        if(countryNames.includes(d.properties.name)) {
+                        // if(d.properties.name == "Brazil") {
                          console.log(d.id)
                         return "#000"
                         } else {
@@ -120,6 +123,32 @@ fetch('./groups.json')
         }
         
         generateTable();
+
+        // source: https://www.w3schools.com/howto/howto_js_sort_table.asp
+        function sortTable() {
+            var table, rows, switching, i, x, y, shouldSwitch;
+            table = document.querySelector('table');;
+            switching = true;
+            while (switching) {
+              switching = false;
+              rows = table.rows;
+              for (i = 1; i < (rows.length - 1); i++) {
+                shouldSwitch = false;
+                x = rows[i].getElementsByTagName("TD")[0];
+                y = rows[i + 1].getElementsByTagName("TD")[0];
+                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                  shouldSwitch = true;
+                  break;
+                }
+              }
+              if (shouldSwitch) {
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+              }
+            }
+          }
+
+          sortTable()
     });
     
 

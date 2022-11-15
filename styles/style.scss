@@ -18,10 +18,10 @@
 }
 
 body {
-  // background-color: var(--color-purple)
+  background-color: var(--color-purple)
 }
 
-h1 {
+h1, h2, h3, caption, th, td{
   font-family: Qatar2022 Arabic;
   color: var(--color-text);
 }
