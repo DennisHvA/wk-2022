@@ -27,6 +27,9 @@ h1, h2, h3, caption, th, td{
 }
 
 table {
+  th:first-child {
+    visibility: hidden;
+  }
   th:nth-child(2) {
     visibility: hidden;
   }
