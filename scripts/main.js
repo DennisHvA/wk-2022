@@ -13,7 +13,7 @@ fetch('./groups.json')
                             
         const cleanData = groups.map(item => {
             let newItem = {
-                P: parseInt (item["Position"]),
+                Place: parseInt (item["Position"]),
                 Flag: item["SquadLogo"],
                 Nation: item["Name"],
                 P: parseInt (item["Points"]),
@@ -21,7 +21,7 @@ fetch('./groups.json')
                 W: parseInt (item["Winned"]),
                 L: parseInt (item["Loosed"]),
                 T: parseInt (item["Tie"]),
-                DS: parseInt (item["Goal Difference"])
+                GD: parseInt (item["Goal Difference"])
             }
 				
             return newItem
@@ -29,10 +29,10 @@ fetch('./groups.json')
 
         console.log(cleanData);
 
-        const countryNames = [];
+        const mapData = [];
             
         cleanData.forEach(item => {
-            countryNames.push(item["Nation"])
+            mapData.push(item["Nation"])
         })
         
         const tableData = [];
@@ -41,45 +41,60 @@ fetch('./groups.json')
             tableData.push(groups)
         })
 
-        console.log(countryNames);
-        // console.log(tableData);
+        console.log(mapData);
 
         const width = 900
         const height = 600   
 
         const svg = d3.select("svg").attr('width', width).attr('height', height)
 
-        // Map and projection
+        // projection
         const projection = d3.geoMercator().scale(120).translate([width / 2, height / 1.40]);
 
-        // Load external data and boot
+        // data map
         d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson").then(data => {
 
-            // Draw the map
+            const Tooltip = d3.select("body")
+                .append("div")
+                .attr("class", "tooltip")
+                .style("opacity", 0)
+                .style("background-color", "white")
+                .style("padding", "2em")
+                .style("position", "absolute")
+            
+            function showTooltip(e, d) {
+                console.log(d.properties.name);
+                Tooltip.style("opacity", 1)
+                d3.select(this)
+                .style("stroke", "black")
+                .style("left", "100px")
+                .style("top", "100px")
+
+                d3.select(".tooltip")
+                .html(`Land: ${d.properties.name}`)
+    
+            }
+            // make map
             svg.append("g")
                 .selectAll("path")
                 .data(data.features)
                 .join("path")
-                    .attr("fill", "#69b3a2")
                     .attr("d", d3.geoPath()
                     .projection(projection)
                     )
                     .style("stroke", "#fff")
+                    .style("stroke-width", 0.5)
                     .attr("fill", function (d) {
-                        // als d.properties.name een element van: countryNames
-                        // countryNames.includes(d.properties.name)
-                        if(countryNames.includes(d.properties.name)) {
+                        if(mapData.includes(d.properties.name)) {
                         // if(d.properties.name == "Brazil") {
-                        //  console.log(d.id)
                         return "#000"
                         } else {
                             return "#00F"
                         }
                     }
                 )
-            
-
-    })
+                .on("mouseover", showTooltip)
+        })
 
         const groupA = tableData.splice(0,4)
         const groupB = tableData.splice(0,4)
@@ -92,17 +107,16 @@ fetch('./groups.json')
 
         console.log(groupA)
 
-        groupA.sort((a, b) => a.P - b.P);
+        groupA.sort((a, b) => a.Place - b.Place);
         
         function generateTable() {
-            /* Always define variables at the top of your scope! */
         
-            let table = document.querySelector('table'); // Grab the entire table
-            let theading = document.querySelector('thead tr'); // Grab the row in the thead
-            let tbody = document.querySelector('tbody') // Grab the body
+            let table = document.querySelector('table'); 
+            let theading = document.querySelector('thead tr');
+            let tbody = document.querySelector('tbody')
         
             Object.keys(groupA[0]).forEach(key => {
-        
+
                 let newElement = document.createElement('th');
                 newElement.textContent = key;
                 theading.appendChild(newElement);
@@ -114,10 +128,22 @@ fetch('./groups.json')
                 tbody.appendChild(tr);
         
                 for (const [key, value] of Object.entries(obj)) {
-        
+                    
+                    // console.log(key+" "+value)
+
                     let td = document.createElement('td');
-                    td.textContent = value; // Use the value, not the property / key!
-                    tr.appendChild(td) // And append it to the row we just made.
+
+                    if (key == "Flag"){
+                        console.log(value)
+                        let imageEl = document.createElement('img');
+                        imageEl.src = value;
+                        td.appendChild(imageEl);
+                    }
+                    else {
+                        td.textContent = value; 
+                    }
+
+                    tr.appendChild(td)
         
                 }
         
@@ -126,6 +152,50 @@ fetch('./groups.json')
         }
         
         generateTable();
+
+        function generateTable2() {
+        
+            let table = document.querySelector('table'); 
+            let theading = document.querySelector('#Bth #Btr');
+            let tbody = document.querySelector('#Btb')
+        
+            Object.keys(groupB[0]).forEach(key => {
+
+                let newElement = document.createElement('th');
+                newElement.textContent = key;
+                theading.appendChild(newElement);
+            })
+        
+            groupB.forEach(obj => {
+        
+                let tr = document.createElement('tr');
+                tbody.appendChild(tr);
+        
+                for (const [key, value] of Object.entries(obj)) {
+                    
+                    // console.log(key+" "+value)
+
+                    let td = document.createElement('td');
+
+                    if (key == "Flag"){
+                        console.log(value)
+                        let imageEl = document.createElement('img');
+                        imageEl.src = value;
+                        td.appendChild(imageEl);
+                    }
+                    else {
+                        td.textContent = value; 
+                    }
+
+                    tr.appendChild(td)
+        
+                }
+        
+            })
+        
+        }
+        
+        generateTable2();
 
     });
     
