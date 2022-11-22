@@ -57,23 +57,27 @@ fetch('./groups.json')
             const Tooltip = d3.select("body")
                 .append("div")
                 .attr("class", "tooltip")
+                .style("position", "absolute")
                 .style("opacity", 0)
                 .style("background-color", "white")
                 .style("padding", "2em")
-                .style("position", "absolute")
             
-            function showTooltip(e, d) {
+            function mouseOver(e, d) {
                 console.log(d.properties.name);
                 Tooltip.style("opacity", 1)
                 d3.select(this)
                 .style("stroke", "black")
-                .style("left", "100px")
-                .style("top", "100px")
 
                 d3.select(".tooltip")
                 .html(`Land: ${d.properties.name}`)
-    
             }
+
+            function mouseMove (e) {
+                d3.select(".tooltip")
+                .style("left", e.pageX + 15 + "px")
+                .style("top", e.pageY + 15 + "px")
+            }
+
             // make map
             svg.append("g")
                 .selectAll("path")
@@ -93,7 +97,8 @@ fetch('./groups.json')
                         }
                     }
                 )
-                .on("mouseover", showTooltip)
+                .on("mouseover", mouseOver)
+                .on("mousemove", mouseMove)
         })
 
         const groupA = tableData.splice(0,4)
