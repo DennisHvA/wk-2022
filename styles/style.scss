@@ -23,14 +23,19 @@ h1, h2, h3, caption, th, td{
 }
 
 body {
-  background-color: var(--color-purple)
+  background-color: var(--color-purple);
 }
 
 .poules {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 table {
+  background-color: black;
+  margin: 1em;
+  
   th:first-child {
     visibility: hidden;
   }
@@ -40,4 +45,27 @@ table {
   th:nth-child(3) {
     visibility: hidden;
   }
+}
+
+td {
+  font-size: 0.8em;
+  min-width: 2em;
+  text-align: center;
+}
+
+td:nth-child(3) {
+  color: red;
+  text-align: left;
+  min-width: 5em;
+}
+
+tr:first-child, tr:nth-child(2) {
+  td:first-child {
+    background-color: green;
+    border-left: red 3px solid;
+  }
+}
+
+td>img {
+  max-width: 90%;
 }

@@ -49,7 +49,7 @@ fetch('./groups.json')
         const svg = d3.select("svg").attr('width', width).attr('height', height)
 
         // projection
-        const projection = d3.geoMercator().scale(120).translate([width / 2, height / 1.40]);
+        const projection = d3.geoMercator().scale(125).translate([width / 2, height / 1.40]);
 
         // data map
         d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson").then(data => {
@@ -63,19 +63,26 @@ fetch('./groups.json')
                 .style("padding", "2em")
             
             function mouseOver(e, d) {
-                console.log(d.properties.name);
-                Tooltip.style("opacity", 1)
-                d3.select(this)
-                .style("stroke", "black")
-
-                d3.select(".tooltip")
-                .html(`Land: ${d.properties.name}`)
-            }
+                    if(mapData.includes(d.properties.name)) {
+                        Tooltip.style("opacity", 1)
+                        // d3.select(this)
+                        // .style("stroke", "black")
+                        d3.select(".tooltip")
+                           .html(`Land: ${d.properties.name}`)
+                    } else {
+                        console.log("fout")
+                    }}
+                // console.log(d.properties.name);
 
             function mouseMove (e) {
                 d3.select(".tooltip")
                 .style("left", e.pageX + 15 + "px")
                 .style("top", e.pageY + 15 + "px")
+            }
+
+            function mouseOut (e) {
+                d3.select(".tooltip")
+                .style("opacity", 0)
             }
 
             // make map
@@ -99,7 +106,8 @@ fetch('./groups.json')
                 )
                 .on("mouseover", mouseOver)
                 .on("mousemove", mouseMove)
-        })
+                .on("mouseout", mouseOut)
+                })
 
         const groupA = tableData.splice(0,4)
         const groupB = tableData.splice(0,4)
@@ -141,7 +149,7 @@ fetch('./groups.json')
                     let td = document.createElement('td');
 
                     if (key == "Flag"){
-                        console.log(value)
+                        // console.log(value)
                         let imageEl = document.createElement('img');
                         imageEl.src = value;
                         td.appendChild(imageEl);
@@ -175,7 +183,7 @@ fetch('./groups.json')
                 for (const [key, value] of Object.entries(obj)) {
                     let td = document.createElement('td');
                     if (key == "Flag"){
-                        console.log(value)
+                        // console.log(value)
                         let imageEl = document.createElement('img');
                         imageEl.src = value;
                         td.appendChild(imageEl);
@@ -209,7 +217,7 @@ fetch('./groups.json')
                 for (const [key, value] of Object.entries(obj)) {
                     let td = document.createElement('td');
                     if (key == "Flag"){
-                        console.log(value)
+                        // console.log(value)
                         let imageEl = document.createElement('img');
                         imageEl.src = value;
                         td.appendChild(imageEl);
@@ -243,7 +251,7 @@ fetch('./groups.json')
                 for (const [key, value] of Object.entries(obj)) {
                     let td = document.createElement('td');
                     if (key == "Flag"){
-                        console.log(value)
+                        // console.log(value)
                         let imageEl = document.createElement('img');
                         imageEl.src = value;
                         td.appendChild(imageEl);
@@ -277,7 +285,7 @@ fetch('./groups.json')
                 for (const [key, value] of Object.entries(obj)) {
                     let td = document.createElement('td');
                     if (key == "Flag"){
-                        console.log(value)
+                        // console.log(value)
                         let imageEl = document.createElement('img');
                         imageEl.src = value;
                         td.appendChild(imageEl);
@@ -311,7 +319,7 @@ fetch('./groups.json')
                 for (const [key, value] of Object.entries(obj)) {
                     let td = document.createElement('td');
                     if (key == "Flag"){
-                        console.log(value)
+                        // console.log(value)
                         let imageEl = document.createElement('img');
                         imageEl.src = value;
                         td.appendChild(imageEl);
@@ -345,7 +353,7 @@ fetch('./groups.json')
                 for (const [key, value] of Object.entries(obj)) {
                     let td = document.createElement('td');
                     if (key == "Flag"){
-                        console.log(value)
+                        // console.log(value)
                         let imageEl = document.createElement('img');
                         imageEl.src = value;
                         td.appendChild(imageEl);
@@ -379,7 +387,7 @@ fetch('./groups.json')
                 for (const [key, value] of Object.entries(obj)) {
                     let td = document.createElement('td');
                     if (key == "Flag"){
-                        console.log(value)
+                        // console.log(value)
                         let imageEl = document.createElement('img');
                         imageEl.src = value;
                         td.appendChild(imageEl);
