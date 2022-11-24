@@ -447,7 +447,7 @@ fetch('./groups.json')
     // const options = {
     //     method: 'GET',
     //     headers: {
-    //         'X-RapidAPI-Key': '63e902f4e8mshfebc13c2fefbf56p1f8e14jsnebdcef5f0e3b',
+    //         'X-RapidAPI-Key': KEY,
     //         'X-RapidAPI-Host': 'football98.p.rapidapi.com'
     //     }
     // };
