@@ -3,6 +3,7 @@ import '../styles/style.scss'
 
 // We can use node_modules directely in the browser!
 import * as d3 from 'd3';
+import { style } from 'd3';
 const KEY = import.meta.env.VITE_API_KEY
 
 console.log('main.js is linked');
@@ -16,11 +17,11 @@ fetch('./groups.json')
                 Place: parseInt (item["Position"]),
                 Flag: item["SquadLogo"],
                 Nation: item["Name"],
-                P: parseInt (item["Points"]),
                 G: parseInt (item["Played"]),
                 W: parseInt (item["Winned"]),
                 L: parseInt (item["Loosed"]),
                 T: parseInt (item["Tie"]),
+                P: parseInt (item["Points"]),
                 GD: parseInt (item["Goal Difference"])
             }
 				
@@ -34,6 +35,20 @@ fetch('./groups.json')
         cleanData.forEach(item => {
             mapData.push(item["Nation"])
         })
+
+        const tooltipRawData = [];
+
+        // cleanData.forEach(groups => {
+        //     tooltipRawData.push(groups)
+        // })
+
+        cleanData.forEach(item => {
+            tooltipRawData.push({flag: item["Flag"], nation: item["Nation"]})
+        })
+
+        const tooltipData = tooltipRawData[0]
+
+        console.log(tooltipRawData)
         
         const tableData = [];
             
@@ -49,7 +64,7 @@ fetch('./groups.json')
         const svg = d3.select("svg").attr('width', width).attr('height', height)
 
         // projection
-        const projection = d3.geoMercator().scale(125).translate([width / 2, height / 1.40]);
+        const projection = d3.geoMercator().scale(125).translate([width / 2.43, height / 1.40]);
 
         // data map
         d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson").then(data => {
@@ -67,6 +82,8 @@ fetch('./groups.json')
                         Tooltip.style("opacity", 1)
                         // d3.select(this)
                         // .style("stroke", "black")
+                        d3.select(this)
+                            .style("fill", "#00cfb7")
                         d3.select(".tooltip")
                            .html(`Land: ${d.properties.name}`)
                     } else {
@@ -80,7 +97,11 @@ fetch('./groups.json')
                 .style("top", e.pageY + 15 + "px")
             }
 
-            function mouseOut (e) {
+            function mouseOut (e, d) {
+                if(mapData.includes(d.properties.name)) {
+                    d3.select(this)
+                        .style("fill", "#8a1538")
+                }
                 d3.select(".tooltip")
                 .style("opacity", 0)
             }
@@ -93,14 +114,14 @@ fetch('./groups.json')
                     .attr("d", d3.geoPath()
                     .projection(projection)
                     )
-                    .style("stroke", "#fff")
+                    .style("stroke", "#8a1538")
                     .style("stroke-width", 0.5)
                     .attr("fill", function (d) {
                         if(mapData.includes(d.properties.name)) {
                         // if(d.properties.name == "Brazil") {
-                        return "#000"
+                        return "#8a1538"
                         } else {
-                            return "#00F"
+                            return "#eeeee4"
                         }
                     }
                 )
@@ -268,6 +289,9 @@ fetch('./groups.json')
         function generateTableE() {
         
             let table = document.querySelector('table'); 
+
+            // table.querySelector('th');
+
             let theading = document.querySelector('#Eth #Etr');
             let tbody = document.querySelector('#Etb')
         
@@ -412,6 +436,23 @@ fetch('./groups.json')
     // };
     
     // fetch('https://football98.p.rapidapi.com/fifaworldcup/table', options)
+    //     .then(response => response.json())
+    //     .then(response => console.log(response))
+    //     .catch(err => console.error(err));
+
+    // --------------
+    // fixtures
+    // --------------
+
+    // const options = {
+    //     method: 'GET',
+    //     headers: {
+    //         'X-RapidAPI-Key': '63e902f4e8mshfebc13c2fefbf56p1f8e14jsnebdcef5f0e3b',
+    //         'X-RapidAPI-Host': 'football98.p.rapidapi.com'
+    //     }
+    // };
+    
+    // fetch('https://football98.p.rapidapi.com/fifaworldcup/fixtures', options)
     //     .then(response => response.json())
     //     .then(response => console.log(response))
     //     .catch(err => console.error(err));
