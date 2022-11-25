@@ -11,6 +11,10 @@ console.log('main.js is linked');
 fetch('./groups.json')
     .then((response) => response.json())
     .then(groups => {
+
+        // ----------------------------------------
+        // DATA
+        // ----------------------------------------
                             
         const cleanData = groups.map(item => {
             let newItem = {
@@ -30,33 +34,25 @@ fetch('./groups.json')
 
         console.log(cleanData);
 
+        // ----------------------------------------
+        // MAP
+        // ----------------------------------------
+
         const mapData = [];
             
         cleanData.forEach(item => {
             mapData.push(item["Nation"])
         })
 
-        const tooltipRawData = [];
+        console.log(mapData);
 
-        // cleanData.forEach(groups => {
-        //     tooltipRawData.push(groups)
-        // })
+        const tooltipRawData = [];
 
         cleanData.forEach(item => {
             tooltipRawData.push({flag: item["Flag"], nation: item["Nation"]})
         })
 
-        const tooltipData = tooltipRawData[0]
-
         console.log(tooltipRawData)
-        
-        const tableData = [];
-            
-        cleanData.forEach(groups => {
-            tableData.push(groups)
-        })
-
-        console.log(mapData);
 
         const width = 900
         const height = 600   
@@ -114,7 +110,13 @@ fetch('./groups.json')
                     .attr("d", d3.geoPath()
                     .projection(projection)
                     )
-                    .style("stroke", "#8a1538")
+                    .style("stroke", function (d) {
+                        if(mapData.includes(d.properties.name)) {
+                        return "#eeeee4"
+                        } else {
+                            return "#8a1538"
+                        }
+                    })
                     .style("stroke-width", 0.5)
                     .attr("fill", function (d) {
                         if(mapData.includes(d.properties.name)) {
@@ -128,7 +130,19 @@ fetch('./groups.json')
                 .on("mouseover", mouseOver)
                 .on("mousemove", mouseMove)
                 .on("mouseout", mouseOut)
-                })
+        })
+
+        // ----------------------------------------
+        // GROUPS
+        // ----------------------------------------
+
+        const tableData = [];
+            
+        cleanData.forEach(groups => {
+            tableData.push(groups)
+        })
+
+        console.log(tableData);
 
         const groupA = tableData.splice(0,4)
         const groupB = tableData.splice(0,4)
@@ -424,8 +438,27 @@ fetch('./groups.json')
             })
         }
         generateTableH();
+
+        // ----------------------------------------
+        // KNOCKOUT
+        // ----------------------------------------
+        const groupA1 = groupA.slice(0, 1)
+        const groupA2 = groupA.slice(1, 2)
+        const groupB1 = groupB.slice(0, 1)
+        const groupB2 = groupB.slice(1, 2)
+        const groupC1 = groupC.slice(0, 1)
+        const groupC2 = groupC.slice(1, 2)
+        const groupD1 = groupD.slice(0, 1)
+        const groupD2 = groupD.slice(1, 2)
+        const groupE1 = groupE.slice(0, 1)
+        const groupE2 = groupE.slice(1, 2)
+        const groupF1 = groupF.slice(0, 1)
+        const groupF2 = groupF.slice(1, 2)
+        const groupG1 = groupG.slice(0, 1)
+        const groupG2 = groupG.slice(1, 2)
+        const groupH1 = groupH.slice(0, 1)
+        const groupH2 = groupH.slice(1, 2)
     });
-    
 
     // const options = {
     //     method: 'GET',
