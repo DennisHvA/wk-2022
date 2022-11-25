@@ -1,0 +1,29 @@
+@import "./variables";
+@import "./tables";
+@import "./bracket";
+
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: Qatar2022 Arabic;
+  src: url(Qatar2022-bold.woff2);
+}
+
+h1, h2, h3, caption, th, td{
+  font-family: Qatar2022 Arabic, sans-serif;
+  color: var(--color-text);
+}
+
+body {
+  background-color: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
