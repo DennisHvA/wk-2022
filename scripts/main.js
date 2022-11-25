@@ -102,6 +102,14 @@ fetch('./groups.json')
                 .style("opacity", 0)
             }
 
+            function handleZoom(e) {
+                d3.select('svg g')
+                  .attr('transform', e.transform);
+              }
+              
+            let zoom = d3.zoom()
+                .on('zoom', handleZoom);
+
             // make map
             svg.append("g")
                 .selectAll("path")
@@ -110,6 +118,7 @@ fetch('./groups.json')
                     .attr("d", d3.geoPath()
                     .projection(projection)
                     )
+                    
                     .style("stroke", function (d) {
                         if(mapData.includes(d.properties.name)) {
                         return "#eeeee4"
@@ -130,6 +139,8 @@ fetch('./groups.json')
                 .on("mouseover", mouseOver)
                 .on("mousemove", mouseMove)
                 .on("mouseout", mouseOut)
+                d3.select('svg')
+                .call(zoom);
         })
 
         // ----------------------------------------

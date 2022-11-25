@@ -1,6 +1,7 @@
 @import "./variables";
 @import "./tables";
 @import "./bracket";
+@import "./loading";
 
 *, *::after, *::before {
   box-sizing:border-box;  
@@ -18,7 +19,10 @@
 
 h1, h2, h3, caption, th, td{
   font-family: Qatar2022 Arabic, sans-serif;
-  color: var(--color-text);
+}
+
+h1, h2, h3 {
+    color: var(--color-text);
 }
 
 body {
@@ -26,27 +30,4 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.loading {
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
-  background-color: var(--color-primary);
-  align-items: center;
-}
-
-h1 {
-  font-size: 4em;
-}
-
-p {
-  font-family: Qatar2022 Arabic;
-  color: var(--color-text);
-  
-}
-.mascot {
-  aspect-ratio: 1 / 1;
-  margin-top: 3em;
-  width: 60vmin;
 }
