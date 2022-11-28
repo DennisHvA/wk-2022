@@ -1,5 +1,14 @@
 .knockout {
   display: flex;
+  justify-content: center;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+}
+
+div {
+  max-width: 75em;
+  max-height: 30em;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
