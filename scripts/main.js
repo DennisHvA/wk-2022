@@ -108,7 +108,9 @@ fetch('./groups.json')
               }
               
             let zoom = d3.zoom()
-                .on('zoom', handleZoom);
+                .on('zoom', handleZoom)
+                .scaleExtent([1, 3])
+                .translateExtent([[0, 0], [width, height]]);
 
             // make map
             svg.append("g")
