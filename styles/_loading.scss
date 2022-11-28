@@ -1,13 +1,12 @@
 .loading {
+    display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
     background-color: var(--color-primary);
     align-items: center;
 }
   
 h1 {
-    font-size: 4em;
+    font-size: 3em;
 }
   
 p {
@@ -17,6 +16,5 @@ p {
 
 .mascot {
     aspect-ratio: 1 / 1;
-    margin-top: 3em;
     width: 60vmin;
 }

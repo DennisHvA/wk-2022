@@ -1,4 +1,4 @@
-section {
+.knockout {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -16,8 +16,8 @@ ul {
 }
   
 li {
-  background-color: #f4f4f4;
-  padding: .5rem;
+  background-color: var(--color-primary);
+  padding: .5em;
   display: flex;
   flex-direction: column;
   margin: .5rem 10px;
@@ -106,15 +106,15 @@ ul:nth-of-type(6) {
   
 ul:first-of-type {
   li:before {
-      display: none;
+    display: none;
   }
 }
   
-  ul:last-of-type {
-    li:before {
-      display: none;
-    }
+ul:last-of-type {
+  li:before {
+    display: none;
   }
+}
   
 ul:nth-of-type(3) {
   li:after {

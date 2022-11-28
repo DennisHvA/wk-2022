@@ -118,7 +118,6 @@ fetch('./groups.json')
                     .attr("d", d3.geoPath()
                     .projection(projection)
                     )
-                    
                     .style("stroke", function (d) {
                         if(mapData.includes(d.properties.name)) {
                         return "#eeeee4"
