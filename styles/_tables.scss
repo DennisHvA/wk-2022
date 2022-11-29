@@ -7,6 +7,8 @@
 
 .row {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1em;
 }
   
@@ -33,6 +35,7 @@ table {
     td:nth-child(3) {
         text-align: left;
         min-width: 5em;
+        text-transform: uppercase;
     }
     
     td:nth-child(1), td:nth-child(3), td:nth-child(8), td:nth-child(9) {
@@ -47,11 +50,17 @@ table {
     td:nth-child(8) {
         background-color: var(--color-secondary);
     }
+
+    td:nth-child(9) {
+        background-color: var(--color-primary);
+    }
 }
 
 caption{
-    color: var(--color-primary);
+    color: white;
+    background-color: black;
     font-size: 1.5em;
+    margin-bottom: 0.5em;
 }
 
 th {
@@ -71,6 +80,7 @@ td, th {
     min-width: 2em;
     text-align: center;
 }
+
 td>img {
     padding: 0.25em;
 }

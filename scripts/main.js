@@ -143,7 +143,7 @@ fetch('./groups.json')
                 d3.select('svg')
                 .call(zoom)
                 .attr("viewBox", "0 0 " + width + " " + height )
-                .attr("preserveAspectRatio", "xMinYMin");
+                
         })
 
         // ----------------------------------------
