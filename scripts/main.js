@@ -141,7 +141,9 @@ fetch('./groups.json')
                 .on("mousemove", mouseMove)
                 .on("mouseout", mouseOut)
                 d3.select('svg')
-                .call(zoom);
+                .call(zoom)
+                .attr("viewBox", "0 0 " + width + " " + height )
+                .attr("preserveAspectRatio", "xMinYMin");
         })
 
         // ----------------------------------------

@@ -26,6 +26,10 @@ h1, h2, h3, p, time{
     color: var(--color-text);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-background);
   display: flex;
@@ -60,4 +64,3 @@ body {
     scroll-snap-align: start;
   }
 }
-
