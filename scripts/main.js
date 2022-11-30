@@ -33,6 +33,17 @@ fetch('./groups.json')
         })
 
         console.log(cleanData);
+    
+        fetch('./results.json')
+        .then((response) => response.json())
+        .then(data => {
+            const testArray = []
+
+            data.forEach(data => {
+                testArray.push(data)
+            })
+
+            console.log(testArray)
 
         // ----------------------------------------
         // MAP
@@ -143,6 +154,7 @@ fetch('./groups.json')
                 d3.select('svg')
                 .call(zoom)
                 .attr("viewBox", "0 0 " + width + " " + height )
+                .attr("preserveAspectRatio", "xMinYMin");
                 
         })
 
@@ -457,6 +469,14 @@ fetch('./groups.json')
         // KNOCKOUT
         // ----------------------------------------
         const groupA1 = groupA.slice(0, 1)
+        const seedA1 = []
+        groupA1.forEach(item => {
+            seedA1.push(item["Nation"])
+        })
+        console.log(seedA1)
+
+        document.getElementById('test').innerHTML = seedA1;
+
         const groupA2 = groupA.slice(1, 2)
         const groupB1 = groupB.slice(0, 1)
         const groupB2 = groupB.slice(1, 2)
@@ -472,6 +492,8 @@ fetch('./groups.json')
         const groupG2 = groupG.slice(1, 2)
         const groupH1 = groupH.slice(0, 1)
         const groupH2 = groupH.slice(1, 2)
+    });
+
     });
 
     // const options = {

@@ -230,10 +230,10 @@
     ],
     " Round of 16 ": [
       {
-        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F1008.png",
-        "homeTeam": "Group A 1st",
-        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F1013.png",
-        "awayTeam": "Group B 2nd",
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F38.png",
+        "homeTeam": "Netherlands",
+        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F81.png",
+        "awayTeam": "USA",
         "MatchDay": "03/12/2022"
       },
       {
@@ -251,10 +251,10 @@
         "MatchDay": "04/12/2022"
       },
       {
-        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F1020.png",
-        "homeTeam": "Group B 1st",
-        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F1019.png",
-        "awayTeam": "Group A 2nd",
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F61.png",
+        "homeTeam": "England",
+        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F121.png",
+        "awayTeam": "Senegal",
         "MatchDay": "04/12/2022"
       },
       {
@@ -284,6 +284,52 @@
         "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F1129.png",
         "awayTeam": "Group G 2nd",
         "MatchDay": "06/12/2022"
+      }
+    ],
+    " Quarter-finals ": [
+      {
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F12111.png",
+        "homeTeam": "Round of 16 5 Winner",
+        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F12105.png",
+        "awayTeam": "Round of 16 6 Winner",
+        "MatchDay": "09/12/2022"
+      },
+      {
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F20346.png",
+        "homeTeam": "Round of sixteen 1 Winner",
+        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F12107.png",
+        "awayTeam": "Round of 16 2 Winner",
+        "MatchDay": "09/12/2022"
+      },
+      {
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F12110.png",
+        "homeTeam": "Round of 16 7 Winner",
+        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F12109.png",
+        "awayTeam": "Round of 16 8 Winner",
+        "MatchDay": "10/12/2022"
+      },
+      {
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F12108.png",
+        "homeTeam": "Round of 16 3 Winner",
+        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F12104.png",
+        "awayTeam": "Round of 16 4 Winner",
+        "MatchDay": "10/12/2022"
+      }
+    ],
+    " Semi-finals ": [
+      {
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F4488.png",
+        "homeTeam": "Quarter-Final 1 Winner",
+        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F4487.png",
+        "awayTeam": "Quarter-Final 2 Winner",
+        "MatchDay": "13/12/2022"
+      },
+      {
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F4490.png",
+        "homeTeam": "Quarter-Final 3 Winner",
+        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F4489.png",
+        "awayTeam": "Quarter-Final 4 Winner",
+        "MatchDay": "14/12/2022"
       }
     ]
   }

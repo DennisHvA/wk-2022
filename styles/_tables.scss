@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 1em;
 }
 
 .row {
@@ -34,7 +35,7 @@ table {
       
     td:nth-child(3) {
         text-align: left;
-        min-width: 5em;
+        min-width: 8em;
         text-transform: uppercase;
     }
     

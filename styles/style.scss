@@ -22,8 +22,13 @@ h1, h2, h3, caption, th, td, time {
   font-family: Qatar2022 Arabic, sans-serif;
 }
 
-h1, h2, h3, p, time{
+h1, h3, p, time{
     color: var(--color-text);
+}
+
+h2 {
+  color: var(--color-primary);
+  font-size: 2em;
 }
 
 html {
