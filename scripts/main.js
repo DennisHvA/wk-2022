@@ -473,9 +473,7 @@ fetch('./groups.json')
         groupA1.forEach(item => {
             seedA1.push(item["Nation"])
         })
-        console.log(seedA1)
-
-        document.getElementById('test').innerHTML = seedA1;
+        document.getElementById('A1').innerHTML = seedA1;
 
         const groupA2 = groupA.slice(1, 2)
         const groupB1 = groupB.slice(0, 1)
