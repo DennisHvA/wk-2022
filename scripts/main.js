@@ -57,18 +57,18 @@ fetch('./groups.json')
 
         console.log(mapData);
 
-        const tooltipRawData = [];
+        const tooltipData = [];
 
         cleanData.forEach(item => {
-            tooltipRawData.push({flag: item["Flag"], nation: item["Nation"]})
+            tooltipData.push({flag: item["Flag"], nation: item["Nation"]})
         })
 
-        console.log(tooltipRawData)
+        // console.log(tooltipRawData)
 
         const width = 780
         const height = 600   
 
-        const svg = d3.select("svg").attr('width', width).attr('height', height)
+        const svg = d3.select("#map").attr('width', width).attr('height', height)
 
         // projection
         const projection = d3.geoMercator().scale(125).translate([width / 2.10, height / 1.40]);
@@ -84,15 +84,17 @@ fetch('./groups.json')
                 .style("background-color", "white")
                 .style("padding", "2em")
             
-            function mouseOver(e, d) {
-                    if(mapData.includes(d.properties.name)) {
+            function mouseOver(e,d) {
+
+                if(mapData.includes(d.properties.name)) {
                         Tooltip.style("opacity", 1)
                         // d3.select(this)
                         // .style("stroke", "black")
                         d3.select(this)
                             .style("fill", "#00cfb7")
                         d3.select(".tooltip")
-                           .html(`Land: ${d.properties.name}`)
+                        // .html(`Land: ${d.properties.name}`)
+                        .html("<img src='https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F79.png'/> Land:"+ d.properties.name)
                     } else {
                         console.log("fout")
                     }}
@@ -148,7 +150,7 @@ fetch('./groups.json')
                         }
                     }
                 )
-                .on("mouseover", mouseOver)
+                .on("mouseover", mouseOver )
                 .on("mousemove", mouseMove)
                 .on("mouseout", mouseOut)
                 d3.select('svg')
@@ -168,7 +170,7 @@ fetch('./groups.json')
             tableData.push(groups)
         })
 
-        console.log(tableData);
+        // console.log(tableData);
 
         const groupA = tableData.splice(0,4)
         const groupB = tableData.splice(0,4)
@@ -468,6 +470,7 @@ fetch('./groups.json')
         // ----------------------------------------
         // KNOCKOUT
         // ----------------------------------------
+        
         const groupA1 = groupA.slice(0, 1)
         const seedA1 = []
         groupA1.forEach(item => {
