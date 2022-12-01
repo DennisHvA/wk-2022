@@ -9,11 +9,19 @@ const KEY = import.meta.env.VITE_API_KEY
 
 console.log('main.js is linked');
 
-const tl = gsap.timeline({repeat: 2, repeatDelay: 1});
+const tlY = gsap.timeline({repeat: 2, repeatDelay: 1});
 
-tl.to(".swipe", {
+tlY.to(".swipeY", {
     opacity: 0, 
-    y: 250, 
+    y: 200, 
+    duration: 2
+});
+
+const tlX = gsap.timeline({repeat: 5, repeatDelay: 1});
+
+tlX.to(".swipeX", {
+    opacity: 0, 
+    x: 200, 
     duration: 2
 });
 
