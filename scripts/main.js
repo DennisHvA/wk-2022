@@ -9,6 +9,10 @@ const KEY = import.meta.env.VITE_API_KEY
 
 console.log('main.js is linked');
 
+// ----------------------------------------
+// ANIMATION
+// ----------------------------------------
+
 const tlY = gsap.timeline({repeat: 2, repeatDelay: 1});
 
 tlY.to(".swipeY", {
@@ -64,6 +68,18 @@ tlBr.to(".br-1", {stroke:"#eeeee4", duration: 0.25})
 svgBr.addEventListener("mouseenter", (e) => tlBr.play());
 svgBr.addEventListener("mouseleave", (e) => tlBr.reverse());
 
+// const options = {
+//         method: 'GET',
+//         headers: {
+//             'X-RapidAPI-Key': KEY,
+//             'X-RapidAPI-Host': 'football98.p.rapidapi.com'
+//         }
+//     };
+    
+// fetch('https://football98.p.rapidapi.com/fifaworldcup/table', options)
+//     .then(response => response.json())
+//     .then(groups => {
+
 fetch('./groups.json')
     .then((response) => response.json())
     .then(groups => {
@@ -87,8 +103,6 @@ fetch('./groups.json')
 				
             return newItem
         })
-
-        console.log(cleanData);
     
         fetch('./results.json')
         .then((response) => response.json())
@@ -98,8 +112,6 @@ fetch('./groups.json')
             data.forEach(data => {
                 testArray.push(data)
             })
-
-            console.log(testArray)
 
         // ----------------------------------------
         // MAP
@@ -111,25 +123,13 @@ fetch('./groups.json')
             mapData.push(item["Nation"])
         })
 
-        console.log(mapData);
-
-        const tooltipData = [];
-
-        cleanData.forEach(item => {
-            tooltipData.push({flag: item["Flag"], nation: item["Nation"]})
-        })
-
-        // console.log(tooltipRawData)
-
         const width = 780
         const height = 600   
 
         const svg = d3.select("#map").attr('width', width).attr('height', height)
 
-        // projection
         const projection = d3.geoMercator().scale(125).translate([width / 2.10, height / 1.40]);
 
-        // data map
         d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson").then(data => {
 
             const Tooltip = d3.select("body")
@@ -142,17 +142,13 @@ fetch('./groups.json')
 
                 if(mapData.includes(d.properties.name)) {
                         Tooltip.style("opacity", 1)
-                        // d3.select(this)
-                        // .style("stroke", "black")
                         d3.select(this)
                             .style("fill", "#00cfb7")
                         d3.select(".tooltip")
-                        // .html(`Land: ${d.properties.name}`)
                         .html(d.properties.name)
                     } else {
                         console.log("fout")
                     }}
-                // console.log(d.properties.name);
 
             function mouseMove (e) {
                 d3.select(".tooltip")
@@ -179,7 +175,6 @@ fetch('./groups.json')
                 .scaleExtent([1, 3])
                 .translateExtent([[0, 0], [width, height]]);
 
-            // make map
             svg.append("g")
                 .selectAll("path")
                 .data(data.features)
@@ -197,7 +192,6 @@ fetch('./groups.json')
                     .style("stroke-width", 0.5)
                     .attr("fill", function (d) {
                         if(mapData.includes(d.properties.name)) {
-                        // if(d.properties.name == "Brazil") {
                         return "#8a1538"
                         } else {
                             return "#eeeee4"
@@ -209,6 +203,7 @@ fetch('./groups.json')
                 .on("mouseout", mouseOut)
                 d3.select('#map')
                 .call(zoom)
+                // doesn't work
                 .attr("viewBox", "0 0 " + width + " " + height )
                 .attr("preserveAspectRatio", "xMinYMin");
                 
@@ -223,8 +218,6 @@ fetch('./groups.json')
         cleanData.forEach(groups => {
             tableData.push(groups)
         })
-
-        // console.log(tableData);
 
         const groupA = tableData.splice(0,4)
         const groupB = tableData.splice(0,4)
@@ -639,33 +632,3 @@ fetch('./groups.json')
     });
 
     });
-
-    // const options = {
-    //     method: 'GET',
-    //     headers: {
-    //         'X-RapidAPI-Key': KEY,
-    //         'X-RapidAPI-Host': 'football98.p.rapidapi.com'
-    //     }
-    // };
-    
-    // fetch('https://football98.p.rapidapi.com/fifaworldcup/table', options)
-    //     .then(response => response.json())
-    //     .then(response => console.log(response))
-    //     .catch(err => console.error(err));
-
-    // --------------
-    // fixtures
-    // --------------
-
-    // const options = {
-    //     method: 'GET',
-    //     headers: {
-    //         'X-RapidAPI-Key': KEY,
-    //         'X-RapidAPI-Host': 'football98.p.rapidapi.com'
-    //     }
-    // };
-    
-    // fetch('https://football98.p.rapidapi.com/fifaworldcup/fixtures', options)
-    //     .then(response => response.json())
-    //     .then(response => console.log(response))
-    //     .catch(err => console.error(err));
