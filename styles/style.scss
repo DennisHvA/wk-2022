@@ -19,7 +19,7 @@
   src: url(/public/Qatar2022Arabic-Bold.woff2);
 }
 
-h1, h2, h3, caption, th, td, date {
+h1, h2, h3, caption, th, td, date, .tooltip{
   font-family: Qatar2022 Arabic, sans-serif;
 }
 
@@ -71,4 +71,11 @@ body {
     height: 100vh;
     scroll-snap-align: start;
   }
+}
+
+.tooltip{
+  color: var(--color-primary);
+  background-color: var(--color-primary2);
+  padding: 1em;
+  border: 1px var(--color-primary) solid;
 }

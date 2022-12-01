@@ -129,8 +129,6 @@ fetch('./groups.json')
                 .attr("class", "tooltip")
                 .style("position", "absolute")
                 .style("opacity", 0)
-                .style("background-color", "white")
-                .style("padding", "2em")
             
             function mouseOver(e,d) {
 
