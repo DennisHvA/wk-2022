@@ -24,7 +24,7 @@ const tlP = gsap.timeline({
   paused: true 
 })
 
-tlP.to(".pa-2", {y: -67, fill:"#8a1538", scale: 7, duration: 0.25})
+tlP.to(".pa-2", {y: -70, fill:"#8a1538", scale: 7.5, duration: 0.25})
 tlP.to(".pa-1", {stroke:"#eeeee4", duration: 0.25})
 
 svgPa.addEventListener("mouseenter", (e) => tlP.play());
@@ -37,7 +37,7 @@ const tlP2 = gsap.timeline({
   paused: true 
 })
 
-tlP2.to(".po-2", {y: -67, fill:"#8a1538", scale: 7, duration: 0.25})
+tlP2.to(".po-2", {y: -70, fill:"#8a1538", scale: 7.5, duration: 0.25})
 tlP2.to(".po-1", {stroke:"#eeeee4", duration: 0.25})
 
 svgPo.addEventListener("mouseenter", (e) => tlP2.play());
@@ -50,7 +50,7 @@ const tlBr = gsap.timeline({
   paused: true 
 })
 
-tlBr.to(".br-2", {y: -67, fill:"#8a1538", scale: 7, duration: 0.25})
+tlBr.to(".br-2", {y: -70, fill:"#8a1538", scale: 7.5, duration: 0.25})
 tlBr.to(".br-1", {stroke:"#eeeee4", duration: 0.25})
 
 svgBr.addEventListener("mouseenter", (e) => tlBr.play());
@@ -142,7 +142,7 @@ fetch('./groups.json')
                             .style("fill", "#00cfb7")
                         d3.select(".tooltip")
                         // .html(`Land: ${d.properties.name}`)
-                        .html("<img src='https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F79.png'/> Land:"+ d.properties.name)
+                        .html(d.properties.name)
                     } else {
                         console.log("fout")
                     }}
@@ -164,7 +164,7 @@ fetch('./groups.json')
             }
 
             function handleZoom(e) {
-                d3.select('svg g')
+                d3.select('#map g')
                   .attr('transform', e.transform);
               }
               

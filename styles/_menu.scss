@@ -1,6 +1,19 @@
+.nav {
+    position: absolute;
+    bottom: -100vh;
+    z-index: 1;
+    width: 100%;
+  
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+  
+    list-style-type: none;
+}  
+
 #menuitem, #menuitem2, #menuitem3 {
     width: 7em;
-  }
+}
   
   .pa-1 {
     stroke-width: 2px;
@@ -40,4 +53,8 @@
 
   .br-2 {
     stroke-miterlimit: 10;
+  }
+
+  .back {
+    fill: var(--color-primary2);
   }
