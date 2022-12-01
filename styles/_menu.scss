@@ -1,0 +1,43 @@
+#menuitem, #menuitem2, #menuitem3 {
+    width: 7em;
+  }
+  
+  .pa-1 {
+    stroke-width: 2px;
+  }
+
+  .pa-1, .pa-2 {
+    fill: none;
+    stroke: #8a1538;
+    stroke-miterlimit: 10;
+  }
+
+  .po-1 {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+  }
+
+  .po-1, .po-2 {
+    fill: none;
+    stroke: #8a1538;
+  }
+
+  .po-2 {
+    stroke-miterlimit: 10;
+  }
+
+  .br-1 {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+  }
+
+  .br-1, .br-2 {
+    fill: none;
+    stroke: #8a1538;
+  }
+
+  .br-2 {
+    stroke-miterlimit: 10;
+  }

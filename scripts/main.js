@@ -13,9 +13,48 @@ const tl = gsap.timeline({repeat: 2, repeatDelay: 1});
 
 tl.to(".swipe", {
     opacity: 0, 
-    x: 250, 
+    y: 250, 
     duration: 2
 });
+
+const svgPa = document.querySelector("#menuitem");
+
+const tlP = gsap.timeline({ 
+  defaults: { ease: "power1.in" }, 
+  paused: true 
+})
+
+tlP.to(".pa-2", {y: -67, fill:"#8a1538", scale: 7, duration: 0.25})
+tlP.to(".pa-1", {stroke:"#eeeee4", duration: 0.25})
+
+svgPa.addEventListener("mouseenter", (e) => tlP.play());
+svgPa.addEventListener("mouseleave", (e) => tlP.reverse());
+
+const svgPo = document.querySelector("#menuitem2");
+
+const tlP2 = gsap.timeline({ 
+  defaults: { ease: "power1.in" }, 
+  paused: true 
+})
+
+tlP2.to(".po-2", {y: -67, fill:"#8a1538", scale: 7, duration: 0.25})
+tlP2.to(".po-1", {stroke:"#eeeee4", duration: 0.25})
+
+svgPo.addEventListener("mouseenter", (e) => tlP2.play());
+svgPo.addEventListener("mouseleave", (e) => tlP2.reverse());
+
+const svgBr = document.querySelector("#menuitem3");
+
+const tlBr = gsap.timeline({ 
+  defaults: { ease: "power1.in" }, 
+  paused: true 
+})
+
+tlBr.to(".br-2", {y: -67, fill:"#8a1538", scale: 7, duration: 0.25})
+tlBr.to(".br-1", {stroke:"#eeeee4", duration: 0.25})
+
+svgBr.addEventListener("mouseenter", (e) => tlBr.play());
+svgBr.addEventListener("mouseleave", (e) => tlBr.reverse());
 
 fetch('./groups.json')
     .then((response) => response.json())
