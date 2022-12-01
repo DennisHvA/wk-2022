@@ -4,9 +4,18 @@ import '../styles/style.scss'
 // We can use node_modules directely in the browser!
 import * as d3 from 'd3';
 import { style } from 'd3';
+import gsap from "gsap";
 const KEY = import.meta.env.VITE_API_KEY
 
 console.log('main.js is linked');
+
+const tl = gsap.timeline({repeat: 2, repeatDelay: 1});
+
+tl.to(".swipe", {
+    opacity: 0, 
+    x: 250, 
+    duration: 2
+});
 
 fetch('./groups.json')
     .then((response) => response.json())
@@ -153,7 +162,7 @@ fetch('./groups.json')
                 .on("mouseover", mouseOver )
                 .on("mousemove", mouseMove)
                 .on("mouseout", mouseOut)
-                d3.select('svg')
+                d3.select('#map')
                 .call(zoom)
                 .attr("viewBox", "0 0 " + width + " " + height )
                 .attr("preserveAspectRatio", "xMinYMin");
