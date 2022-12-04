@@ -68,21 +68,21 @@ tlBr.to(".br-1", {stroke:"#eeeee4", duration: 0.25})
 svgBr.addEventListener("mouseenter", (e) => tlBr.play());
 svgBr.addEventListener("mouseleave", (e) => tlBr.reverse());
 
-// const options = {
-//         method: 'GET',
-//         headers: {
-//             'X-RapidAPI-Key': KEY,
-//             'X-RapidAPI-Host': 'football98.p.rapidapi.com'
-//         }
-//     };
+const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': KEY,
+            'X-RapidAPI-Host': 'football98.p.rapidapi.com'
+        }
+    };
     
-// fetch('https://football98.p.rapidapi.com/fifaworldcup/table', options)
-//     .then(response => response.json())
-//     .then(groups => {
-
-fetch('./groups.json')
-    .then((response) => response.json())
+fetch('https://football98.p.rapidapi.com/fifaworldcup/table', options)
+    .then(response => response.json())
     .then(groups => {
+
+// fetch('./groups.json')
+//     .then((response) => response.json())
+//     .then(groups => {
 
         // ----------------------------------------
         // DATA
@@ -104,6 +104,46 @@ fetch('./groups.json')
             return newItem
         })
     
+        fetch('./schedule.json')
+        .then((response) => response.json())
+        .then(data => {
+            const testArray = []
+
+            data.forEach(data => {
+                testArray.push(data)
+            })
+
+            console.log(testArray)
+
+            const quarter = []
+
+            testArray.forEach(item => {
+                quarter.push(item[" Quarter-finals "])
+            })
+            
+            console.log(quarter)
+
+            const test = quarter[0]
+            console.log(test)
+
+            const sort = [...test].reverse();
+            console.log(sort)
+
+            const quarterM1 = []
+
+            quarter.forEach(item => {
+                quarterM1.push(item["0"])
+            })
+
+            console.log(quarterM1)
+
+            const quarterCountry = []
+
+            quarterM1.forEach(item => {
+                quarterCountry.push({awayTeam: item["awayTeam"], homeTeam: item["homeTeam"]})
+            })
+
+            console.log(quarterCountry)
         // ----------------------------------------
         // MAP
         // ----------------------------------------
@@ -619,4 +659,6 @@ fetch('./groups.json')
             seedH2.push(item["Nation"])
         })
         document.getElementById('H2').innerHTML = seedH2;
+    });
+
     });
