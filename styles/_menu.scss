@@ -1,20 +1,25 @@
+nav {
+    display: flex;
+    justify-content: center;
+}
+
 .nav {
-    position: absolute;
+    position: relative;
     bottom: -100vh;
-    z-index: 1;
-    width: 100%;
+    z-index: 2;
   
     display: flex;
     justify-content: center;
-    gap: 1em;
+    gap: 0.5em;
   
     list-style-type: none;
 }  
 
 #menuitem, #menuitem2, #menuitem3 {
-    width: 7em;
+    width: 6em;
+    height: 6em;
 }
-  
+
 .pa-1 {
     stroke-width: 2px;
 }

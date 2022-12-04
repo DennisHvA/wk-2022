@@ -1,101 +1,167 @@
 [
   {
-    " Group stage: Matchday 3 ": [
+    " Round of 16 ": [
       {
-        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F88.png",
-        "homeTeam": "Serbia",
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F43.png",
+        "homeTeam": "Portugal",
         "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F93.png",
         "awayTeam": "Switzerland",
         "homeTeamScore": "",
         "awayTeamScore": ""
       },
       {
-        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F87.png",
-        "homeTeam": "Cameroon",
-        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F79.png",
-        "awayTeam": "Brazil",
-        "homeTeamScore": "",
-        "awayTeamScore": ""
-      },
-      {
-        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F60.png",
-        "homeTeam": "Ghana",
-        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F56.png",
-        "awayTeam": "Uruguay",
-        "homeTeamScore": "",
-        "awayTeamScore": ""
-      },
-      {
-        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F70.png",
-        "homeTeam": "South Korea",
-        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F43.png",
-        "awayTeam": "Portugal",
-        "homeTeamScore": "",
-        "awayTeamScore": ""
-      },
-      {
-        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F52.png",
-        "homeTeam": "Japan",
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F108.png",
+        "homeTeam": "Morocco",
         "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F34.png",
         "awayTeam": "Spain",
         "homeTeamScore": "",
         "awayTeamScore": ""
       },
       {
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F79.png",
+        "homeTeam": "Brazil",
+        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F70.png",
+        "awayTeam": "South Korea",
+        "homeTeamScore": "",
+        "awayTeamScore": ""
+      },
+      {
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F52.png",
+        "homeTeam": "Japan",
+        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F99.png",
+        "awayTeam": "Croatia",
+        "homeTeamScore": "",
+        "awayTeamScore": ""
+      },
+      {
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F61.png",
+        "homeTeam": "England",
+        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F121.png",
+        "awayTeam": "Senegal",
+        "homeTeamScore": "",
+        "awayTeamScore": ""
+      },
+      {
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F45.png",
+        "homeTeam": "France",
+        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F103.png",
+        "awayTeam": "Poland",
+        "homeTeamScore": "",
+        "awayTeamScore": ""
+      },
+      {
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F55.png",
+        "homeTeam": "Argentina",
+        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F74.png",
+        "awayTeam": "Australia",
+        "homeTeamScore": "",
+        "awayTeamScore": ""
+      },
+      {
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F38.png",
+        "homeTeam": "Netherlands",
+        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F81.png",
+        "awayTeam": "USA",
+        "homeTeamScore": "3",
+        "awayTeamScore": "1"
+      }
+    ],
+    " Group stage: Matchday 3 ": [
+      {
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F88.png",
+        "homeTeam": "Serbia",
+        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F93.png",
+        "awayTeam": "Switzerland",
+        "homeTeamScore": "2",
+        "awayTeamScore": "3"
+      },
+      {
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F87.png",
+        "homeTeam": "Cameroon",
+        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F79.png",
+        "awayTeam": "Brazil",
+        "homeTeamScore": "1",
+        "awayTeamScore": "0"
+      },
+      {
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F60.png",
+        "homeTeam": "Ghana",
+        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F56.png",
+        "awayTeam": "Uruguay",
+        "homeTeamScore": "0",
+        "awayTeamScore": "2"
+      },
+      {
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F70.png",
+        "homeTeam": "South Korea",
+        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F43.png",
+        "awayTeam": "Portugal",
+        "homeTeamScore": "2",
+        "awayTeamScore": "1"
+      },
+      {
+        "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F52.png",
+        "homeTeam": "Japan",
+        "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F34.png",
+        "awayTeam": "Spain",
+        "homeTeamScore": "2",
+        "awayTeamScore": "1"
+      },
+      {
         "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F98.png",
         "homeTeam": "Costa Rica",
         "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F96.png",
         "awayTeam": "Germany",
-        "homeTeamScore": "",
-        "awayTeamScore": ""
+        "homeTeamScore": "2",
+        "awayTeamScore": "4"
       },
       {
         "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F99.png",
         "homeTeam": "Croatia",
         "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F116.png",
         "awayTeam": "Belgium",
-        "homeTeamScore": "",
-        "awayTeamScore": ""
+        "homeTeamScore": "0",
+        "awayTeamScore": "0"
       },
       {
         "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F132.png",
         "homeTeam": "Canada",
         "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F108.png",
         "awayTeam": "Morocco",
-        "homeTeamScore": "",
-        "awayTeamScore": ""
+        "homeTeamScore": "1",
+        "awayTeamScore": "2"
       },
       {
         "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F104.png",
         "homeTeam": "Saudi Arabia",
         "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F69.png",
         "awayTeam": "Mexico",
-        "homeTeamScore": "",
-        "awayTeamScore": ""
+        "homeTeamScore": "1",
+        "awayTeamScore": "2"
       },
       {
         "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F103.png",
         "homeTeam": "Poland",
         "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F55.png",
         "awayTeam": "Argentina",
-        "homeTeamScore": "",
-        "awayTeamScore": ""
+        "homeTeamScore": "0",
+        "awayTeamScore": "2"
       },
       {
         "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F112.png",
         "homeTeam": "Tunisia",
         "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F45.png",
         "awayTeam": "France",
-        "homeTeamScore": "",
-        "awayTeamScore": ""
+        "homeTeamScore": "1",
+        "awayTeamScore": "0"
       },
       {
         "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F74.png",
         "homeTeam": "Australia",
         "awayLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F92.png",
         "awayTeam": "Denmark",
-        "homeTeamScore": "",
-        "awayTeamScore": ""
+        "homeTeamScore": "1",
+        "awayTeamScore": "0"
       },
       {
         "homeLogo": "https://image-service.onefootball.com/transform?w=22&h=22&dpr=2&image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F102.png",

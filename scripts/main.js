@@ -104,15 +104,6 @@ fetch('./groups.json')
             return newItem
         })
     
-        fetch('./results.json')
-        .then((response) => response.json())
-        .then(data => {
-            const testArray = []
-
-            data.forEach(data => {
-                testArray.push(data)
-            })
-
         // ----------------------------------------
         // MAP
         // ----------------------------------------
@@ -198,12 +189,11 @@ fetch('./groups.json')
                         }
                     }
                 )
-                .on("mouseover", mouseOver )
+                .on("mouseover touchstart", mouseOver )
                 .on("mousemove", mouseMove)
                 .on("mouseout", mouseOut)
                 d3.select('#map')
                 .call(zoom)
-                // doesn't work
                 .attr("viewBox", "0 0 " + width + " " + height )
                 .attr("preserveAspectRatio", "xMinYMin");
                 
@@ -629,6 +619,4 @@ fetch('./groups.json')
             seedH2.push(item["Nation"])
         })
         document.getElementById('H2').innerHTML = seedH2;
-    });
-
     });
