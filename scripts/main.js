@@ -104,46 +104,6 @@ fetch('https://football98.p.rapidapi.com/fifaworldcup/table', options)
             return newItem
         })
     
-        fetch('./schedule.json')
-        .then((response) => response.json())
-        .then(data => {
-            const testArray = []
-
-            data.forEach(data => {
-                testArray.push(data)
-            })
-
-            console.log(testArray)
-
-            const quarter = []
-
-            testArray.forEach(item => {
-                quarter.push(item[" Quarter-finals "])
-            })
-            
-            console.log(quarter)
-
-            const test = quarter[0]
-            console.log(test)
-
-            const sort = [...test].reverse();
-            console.log(sort)
-
-            const quarterM1 = []
-
-            quarter.forEach(item => {
-                quarterM1.push(item["0"])
-            })
-
-            console.log(quarterM1)
-
-            const quarterCountry = []
-
-            quarterM1.forEach(item => {
-                quarterCountry.push({awayTeam: item["awayTeam"], homeTeam: item["homeTeam"]})
-            })
-
-            console.log(quarterCountry)
         // ----------------------------------------
         // MAP
         // ----------------------------------------
@@ -659,6 +619,4 @@ fetch('https://football98.p.rapidapi.com/fifaworldcup/table', options)
             seedH2.push(item["Nation"])
         })
         document.getElementById('H2').innerHTML = seedH2;
-    });
-
     });
