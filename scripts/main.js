@@ -103,7 +103,20 @@ fetch('https://football98.p.rapidapi.com/fifaworldcup/table', options)
 				
             return newItem
         })
-    
+        
+        fetch('https://football98.p.rapidapi.com/fifaworldcup/results', options)
+        .then(response => response.json())
+        .then(results => {
+
+        // fetch('./results.json')
+        // .then((response) => response.json())
+        // .then(results => {
+
+            const resultsData = []
+            results.forEach(data => {
+                resultsData.push(data)
+            })
+
         // ----------------------------------------
         // MAP
         // ----------------------------------------
@@ -619,4 +632,97 @@ fetch('https://football98.p.rapidapi.com/fifaworldcup/table', options)
             seedH2.push(item["Nation"])
         })
         document.getElementById('H2').innerHTML = seedH2;
+
+        // function make() {
+        //     const imageLink = 'https://oneftbl-cms.imgix.net/https%3A%2F%2Fimages.onefootball.com%2Ficons%2Fteams%2F164%2F38.png?auto=format%2Ccompress&crop=faces&dpr=2&fit=crop&h=22&q=25&w=22&s=34337e6ebce324335ee389617508f129'
+        //     let createImg = document.createElement('img');
+        //     let match = document.querySelector('.left')
+        //                 createImg.src = imageLink;
+        //                 match.appendChild(createImg);
+        // }
+        // make();
+
+            const resultsQuarter = []
+
+            resultsData.forEach(item => {
+                resultsQuarter.push(item[" Quarter-finals "])
+            })
+
+            const quarterInside = resultsQuarter[0]
+            const quarterCountrys = []
+            quarterInside.forEach(item => {
+                quarterCountrys.push(item["awayTeam"], item["homeTeam"])
+            })
+
+            const quarterSort = [...quarterCountrys].reverse();
+
+            const quarter1 = quarterSort.splice(0,1)
+            document.getElementById('quarter1').innerHTML = quarter1;
+
+            const quarter2 = quarterSort.splice(0,1)
+            document.getElementById('quarter2').innerHTML = quarter2;
+
+            const quarter3 = quarterSort.splice(0,1)
+            document.getElementById('quarter3').innerHTML = quarter3;
+
+            const quarter4 = quarterSort.splice(0,1)
+            document.getElementById('quarter4').innerHTML = quarter4;
+
+            const quarter5 = quarterSort.splice(0,1)
+            document.getElementById('quarter5').innerHTML = quarter5;
+
+            const quarter6 = quarterSort.splice(0,1)
+            document.getElementById('quarter6').innerHTML = quarter6;
+
+            const quarter7 = quarterSort.splice(0,1)
+            document.getElementById('quarter7').innerHTML = quarter7;
+
+            const quarter8 = quarterSort.splice(0,1)
+            document.getElementById('quarter8').innerHTML = quarter8;
+
+            const resultsSemis = []
+            resultsData.forEach(item => {
+                resultsSemis.push(item[" Semi-finals "])
+            })
+
+            const semisInside = resultsSemis[0]
+            const semisCountrys = []
+            semisInside.forEach(item => {
+                semisCountrys.push(item["awayTeam"], item["homeTeam"])
+            })
+
+            const semisSort = [...semisCountrys].reverse();
+
+            const semis1 = semisSort.splice(0,1)
+            document.getElementById('semis1').innerHTML = semis1;
+
+            const semis2 = semisSort.splice(0,1)
+            document.getElementById('semis2').innerHTML = semis2;
+
+            const semis3 = semisSort.splice(0,1)
+            document.getElementById('semis3').innerHTML = semis3;
+
+            const semis4 = semisSort.splice(0,1)
+            document.getElementById('semis4').innerHTML = semis4;
+
+            const resultsFinal = []
+            resultsData.forEach(item => {
+                resultsFinal.push(item[" Final "])
+            })
+
+            const finalInside = resultsFinal[0]
+            const finalCountrys = []
+            finalInside.forEach(item => {
+                finalCountrys.push(item["awayTeam"], item["homeTeam"])
+            })
+
+            const finalSort = [...finalCountrys].reverse();
+
+            const final1 = finalSort.splice(0,1)
+            document.getElementById('final1').innerHTML = final1;
+
+            const final2 = finalSort.splice(0,1)
+            document.getElementById('final2').innerHTML = final2;
+    });
+
     });
