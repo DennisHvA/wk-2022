@@ -76,13 +76,13 @@ const options = {
         }
     };
     
-fetch('https://football98.p.rapidapi.com/fifaworldcup/table', options)
-    .then(response => response.json())
-    .then(groups => {
-
-// fetch('./groups.json')
-//     .then((response) => response.json())
+// fetch('https://football98.p.rapidapi.com/fifaworldcup/table', options)
+//     .then(response => response.json())
 //     .then(groups => {
+
+fetch('./groups.json')
+    .then((response) => response.json())
+    .then(groups => {
 
         // ----------------------------------------
         // DATA
@@ -104,13 +104,13 @@ fetch('https://football98.p.rapidapi.com/fifaworldcup/table', options)
             return newItem
         })
         
-        fetch('https://football98.p.rapidapi.com/fifaworldcup/results', options)
-        .then(response => response.json())
-        .then(results => {
-
-        // fetch('./results.json')
-        // .then((response) => response.json())
+        // fetch('https://football98.p.rapidapi.com/fifaworldcup/results', options)
+        // .then(response => response.json())
         // .then(results => {
+
+        fetch('./results.json')
+        .then((response) => response.json())
+        .then(results => {
 
             const resultsData = []
             results.forEach(data => {
